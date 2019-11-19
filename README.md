@@ -11,4 +11,4 @@ this is also my first project made in school and it is still unfinished as it on
  <li>user login.</li>
   <li>site redesign.</li>
 <br>
-video:https://youtu.be/VbiSUw_x3CI
+<a href="https://youtu.be/VbiSUw_x3CI" target="_blank">video</a>
