@@ -1,4 +1,56 @@
-.back:hover {
-    background-color: black !important;
-    color:white !important;
-  }
+a:hover {
+  text-decoration: none;
+}
+.section-padding {
+  padding: 60px 0;
+}
+.bottom {
+  border-top: 1px solid black;
+
+  margin-top: 20px;
+  background-color: #f8f9fa;
+}
+.bottom .copyright {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+.copyright a {
+  color: #1b1b1b;
+  margin-left: 3px;
+  padding-right: 3px;
+}
+.bottom p {
+  margin-bottom: 0;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.copyright p span {
+  color: #2e2e2e;
+}
+.bottom .copyright p,
+.bottom .copyright a:hover {
+  color: #6c6d83;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
+#body {
+  padding: 10px;
+  padding-bottom: 60px; /* Height of the footer */
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
+  /* background: #6cf; */
+}

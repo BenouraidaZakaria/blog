@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Blog Home</title>
+<title><?php echo $_GET["category"] ?></title>
 <div id="container">
   <div id="header">
     <?php
@@ -8,6 +8,7 @@
     require 'nav.php'
     ?>
   </div>
+
   <div id="body">
     <div class="container-fluid" style="width:100%">
       <div class="row" style="margin:20px 0 0 0;">
@@ -15,8 +16,9 @@
           <?php
           $mysqli = new mysqli('localhost', 'root', '', 'blog');
           $mysqli->set_charset("utf8");
-          $requete = 'SELECT * FROM entries WHERE showstatus=1 ORDER BY Title ';
-          $resultat = $mysqli->query($requete);
+          $cate = $_GET["category"];
+          $requete = "SELECT * FROM entries WHERE showstatus=1 AND Category = '$cate' ORDER BY Title";
+          $resultat = $mysqli->query($requete) or die($mysqli->error);
           echo '<div class="row">';
           while ($ligne = $resultat->fetch_assoc()) {
             ?>
@@ -61,15 +63,16 @@
             </tbody>
           </table>
         </div>
+
       </div>
     </div>
   </div>
-
-  <div id="footer">
-    <?php
-    require 'footer.php';
-    ?>
-  </div>
+</div>
+</div id="footer">
+<?php
+require 'footer.php';
+?>
+</div>
 </div>
 
 </html>
